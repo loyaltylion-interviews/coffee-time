@@ -1,0 +1,456 @@
+@primaryFont: 'Roboto',
+sans-serif;
+@secondaryFont: 'Cabin',
+sans-serif;
+@white: #fff;
+@primary50: #fce4ec;
+@primary100: #f8bbd0;
+@primary200: #f48fb1;
+@primary300: #f06292;
+@primary500: #e91e63;
+@secondary50: #eceff1;
+@secondary200: #b0bec5;
+@secondary900: #263238;
+@compBlue900: #1a237e;
+@compOrange900: #bf360c;
+@xsmall: 390px;
+@small: 570px;
+@medium: 900px;
+@large: 1200px;
+@xlarge: 3000px;
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: @primaryFont;
+    box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li,
+span,
+p {
+    margin: 0;
+    padding: 0;
+}
+.container,
+.header,
+.top-bar,
+.cover,
+.error-screen,
+.map-error,
+.search-results {
+    display: flex;
+    flex-wrap: wrap;
+}
+.error-screen {
+    background-color: @secondary50;
+    align-items: center;
+    justify-content: center;
+}
+.warning-message {
+    font-size: 2em;
+    color: @secondary200;
+}
+.top-bar {
+    width: 100%;
+    justify-content: space-between;
+    background-color: @white;
+    color: @primary500;
+}
+.top-bar-reverse {
+    width: 100%;
+    flex-direction: row-reverse;
+    background-color: @primary500;
+    color: @white;
+}
+.top-bar-brand-name {
+    font-family: @secondaryFont;
+}
+.main-action {
+    text-transform: uppercase;
+    color: @white;
+    background-color: @primary500;
+    border-radius: 3px;
+    border: 1px solid @primary500;
+    outline: none;
+    &:hover {
+        cursor: pointer;
+    }
+}
+.searchbox-input {
+    outline: none;
+    background-color: transparent;
+    border: none;
+    font-size: 1em;
+    border-bottom: 1px solid @primary300;
+    color: @white;
+    &::-webkit-input-placeholder {
+        text-transform: uppercase;
+        color: @primary200;
+        font-weight: 100;
+    }
+    &::-moz-placeholder {
+        text-transform: uppercase;
+        color: @primary200;
+        font-weight: 100;
+    }
+    &:-moz-placeholder {
+        text-transform: uppercase;
+        color: @primary200;
+        font-weight: 100;
+    }
+    &:-ms-input-placeholder {
+        text-transform: uppercase;
+        color: @primary200;
+        font-weight: 100;
+    }
+    &:focus {
+        color: @white;
+    }
+}
+.cover {
+    background-size: cover;
+    background-blend-mode: multiply;
+    align-items: center;
+    justify-content: space-around;
+}
+.cover-message-title {
+    color: @primary50;
+    font-family: @secondaryFont;
+}
+.cover-message-subtitle {
+    color: @primary50;
+    font-family: @primaryFont;
+}
+
+.list-options {
+    color: white;
+    font-size: 1em;
+    padding: 1em 2em;
+    height: 3em;
+    background: @secondary900 url("../../img/src/filterIcon.svg") no-repeat right center;
+    cursor: pointer;
+}
+.list-options-hide {
+    display: none;
+}
+.list-options-show {
+    list-style: none;
+    background-color: @white;
+    position: absolute;
+    padding: 1em;
+    left: .5em;
+    box-shadow: 3px 4px 7px -4px @secondary200;
+}
+.list-options-show li {
+    line-height: 1.8em;
+    padding: 0 1em;
+}
+.list-options-active {
+    font-weight: bold;
+    color: @primary500;
+}
+.list-content {
+    list-style: none;
+    background-color: @white;
+}
+.list-item {
+    border-bottom: 1px solid @secondary50;
+    padding: 1em;
+    cursor: pointer;
+}
+.list-item-header {
+    font-weight: 700;
+    color: @secondary900;
+}
+.list-item-details {
+    font-weight: 400;
+    color: @secondary900;
+}
+.list-item-show {
+    color: @primary500;
+    text-decoration: none;
+    font-weight: 700;
+}
+.hide {
+    display: none;
+}
+.venue-markerInfo-title {
+    color: @primary500;
+    font-weight: 100;
+}
+.venue-markerInfo-details {
+    color: @secondary900;
+    font-weight: 700;
+}
+@media (max-width: @xlarge) {
+    .col-full-lg {
+        width: 100vw;
+    }
+    .col-third-lg {
+        width: 25vw;
+    }
+    .col-fourth-lg {
+        width: 33.33vw;
+    }
+    .col-ninith-lg {
+        width: 75vw;
+    }
+    .col-half-lg {
+        width: 50vw;
+    }
+    .container {
+        flex-direction: row;
+    }
+    .top-bar {
+        padding: 2em;
+    }
+    .header {
+        align-items: center;
+    }
+    .top-bar-brand-logo {
+        width: 24px;
+        height: 24px;
+        margin: .3em;
+    }
+    .cover {
+        width: 100vw;
+        height: 94vh;
+        padding: 7em;
+    }
+    #map {
+        width: 75vw;
+        height: 84vh;
+        &.map-error {
+            padding: 0 3em;
+            background-color: @secondary50;
+            color: @secondary200;
+            font-size: 1.5em;
+            font-weight: 100;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    .cover {
+        background: linear-gradient(to left top, @compBlue900, @compOrange900), url('../../img/dist/homeBG-3px.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .main-action {
+        font-weight: 400;
+        font-size: .8em;
+        padding: .8em;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    .searchbox {
+        padding: 1em 0;
+    }
+    .searchbox-input {
+        width: 20em;
+    }
+    .cover-message-title {
+        font-size: 2.8em;
+    }
+    .cover-message-subtitle {
+        font-size: 1.5em;
+        font-weight: 100;
+    }
+    .error-screen {
+        width: 100vw;
+        height: 89vh;
+        padding: 0 7em;
+    }
+    .list-options {
+        background-position: 90%;
+    }
+    .list-options-show {
+        width: 23.7%;
+        top: 23vh;
+    }
+    .list-content {
+        height: 77vh;
+        overflow: scroll;
+        padding: 1em;
+    }
+    .list-content ul {
+        padding: 0 1em;
+    }
+    .list-item-header {
+        font-size: 1em;
+        padding: 1em 0 0 0;
+    }
+    .list-item-details {
+        font-size: .9em;
+        padding: 0 0 .5em 0;
+    }
+    .venue-markerInfo {
+        width: 12em;
+    }
+    .venue-markerInfo-title {
+        font-size: 1.5em;
+        padding: 1em 0 .5em 0;
+    }
+    .venue-markerInfo-details:last-of-type {
+        padding: 0 0 1em 0;
+    }
+}
+@media (max-width: @large) {
+    .col-full-md {
+        width: 100vw;
+    }
+    .cover {
+        background: linear-gradient(to left top, @compBlue900, @compOrange900), url('../../img/dist/homeBG-2px.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .main {
+        order: 1;
+    }
+    .secondary {
+        order: 2;
+    }
+    #map {
+        width: 100vw;
+        height: 40vh;
+    }
+    .list-content {
+        overflow: scroll;
+        height: 40em;
+        padding: 0 1em;
+    }
+    .list-options {
+        background-position: 95%;
+    }
+    .list-options-show {
+        width: 98%;
+        top: 63vh;
+        max-height: 12em;
+        overflow: scroll;
+    }
+
+}
+@media (max-width: @medium) {
+    #map {
+        width: 100vw;
+        height: 30vh;
+    }
+    .list-content {
+        height: 30em;
+    }
+    .list-options-show {
+        top: 53vh;
+    }
+}
+@media (max-width: @small) {
+    .top-bar-reverse {
+        position: fixed;
+        z-index: 1000;
+    }
+    .top-bar-brand-name {
+        line-height: 1.5em;
+        padding: 0 .4em;
+    }
+    .cover {
+        background: linear-gradient(to left top, @compBlue900, @compOrange900), url('../../img/dist/homeBG-1px.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 86vh;
+        padding: 0;
+    }
+    .cover-message {
+        padding: 3em;
+        margin: 0 auto;
+    }
+    .cover-message-title {
+        line-height: 1em;
+    }
+    .cover-message-subtitle {
+        font-size: 1em;
+        line-height: 2.5em;
+    }
+    .error-screen {
+        height: 80vh;
+        padding: 0 3em;
+        margin: 9.5em 0 0 0;
+    }
+    .search-results {
+        padding: 9.5em 0 0 0;
+    }
+
+
+    .list-options {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background-position: 90%;
+    }
+    .list-options-show {
+        width: 97%;
+        top: 82%;
+        box-shadow: 0px -3px 17px -5px @secondary200;
+    }
+    .list-content {
+        overflow: visible;
+        height: 90%;
+    }
+    .list-item {
+        padding: 1em 2em;
+    }
+    .searchbox-input {
+        width: 18em;
+    }
+    #map {
+        width: 100vw;
+        height: 35vh;
+        &.map-error {
+            height: 10vh;
+            padding: 2em;
+                font-size: 1em;
+        }
+    }
+    .venue-markerInfo {
+        width: 12em;
+    }
+    .venue-markerInfo-title {
+        font-size: 1.2em;
+    }
+}
+@media (max-width: @xsmall) {
+    .top-bar {
+        padding: 1em;
+    }
+    .top-bar-brand-name {
+        padding: 0;
+    }
+    .cover {
+        height: 88vh;
+    }
+    .cover-message-subtitle {
+        line-height: 2em;
+    }
+    .error-screen {
+        padding: 0 2em;
+        margin: 7.5em 0 0 0;
+    }
+    .search-results {
+        padding: 7.5em 0 0 0;
+    }
+    .searchbox-input {
+        width: 14em;
+    }
+    .top-bar-brand-logo {
+        width: 24px;
+        height: 24px;
+        margin: .3em;
+    }
+}

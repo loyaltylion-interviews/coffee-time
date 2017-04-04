@@ -1,0 +1,35 @@
+
+  <!-- ko if:  $root.queryResult().status() !== 'RESULTS_FOUND'-->
+  <div class='error-screen'>
+    <p class='warning-message' data-bind='visible: $root.queryResult().status() == "REQUEST_ERROR"'>Something went wrong. Try to refresh the page, if that doesn't work, try later!</p>
+    <p class='warning-message' data-bind='visible: $root.queryResult().status() == "NO_RESULTS_FOUND"'>Didn't find anything here! Try with another location!</p>
+  </div>
+  <!-- /ko -->
+
+  <div class='search-results' data-bind='visible: $root.queryResult().status() == "RESULTS_FOUND"'>
+    <div class='col-third-lg col-full-md secondary'>
+      <div data-bind="with: $root.filter">
+        <h2 data-bind='text: active, click: $root.getFilters' class='list-options'></h2>
+        <ul data-bind= 'foreach: list,
+                        css: { "list-options-show": render(), "list-options-hide": !render()}'>
+          <li data-bind='text: $data,
+                         css: {"list-options-active": $data === $parent.active()},
+                         click: function () { $root.getFilters($parent), $root.setFilter($data) }'>
+          </li>
+        </ul>
+      </div>
+      <ul class='list-content' data-bind='foreach: $root.filteredPlacesList'>
+        <li class='list-item'>
+         <div class = 'list-info' data-bind='click: $root.markPlace'>
+             <h2 class='list-item-header' data-bind='text: title'></h2>
+             <p class='list-item-details' data-bind='text: address'></p>
+         </div>
+          <a target='_blank'
+             data-bind='attr: { href: website }, css: { "list-item-show": checked(), hide: !checked()}'>See on foursquare</a>
+        </li>
+      </ul>
+    </div>
+    <div class='col-ninith-lg main col-full-md main'>
+      <div id='map' data-bind='mapView: {area:  $root.queryResult(), filter: $root.filter.active}'></div>
+    </div>
+  </div>

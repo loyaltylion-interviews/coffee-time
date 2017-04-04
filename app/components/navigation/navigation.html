@@ -1,0 +1,13 @@
+<div class='header'>
+  <object type='image/svg+xml' data='app/img/src/logo.svg' class='top-bar-brand-logo'>
+  </object>
+  <h1 class='top-bar-brand-name' data-bind='text: $root.brand'></h1>
+</div>
+
+<div>
+  <button type='button' data-bind='click: $parent.getToken, visible: !$root.account()' class='main-action'>
+    <i class='fa fa-foursquare' aria-hidden='true'></i>
+    <span>Connect</span>
+  </button>
+  <div data-bind='component: "searchBox", visible:$root.account()'></div>
+</div>

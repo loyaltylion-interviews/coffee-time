@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='utf-8'>
+  <meta name='viewport' content='width=device-width'>
+  <title>Coffee Time</title>
+  <link href='app/styles/dist/main.css' rel='stylesheet'>
+  <link href='app/styles/src/font-awesome/css/font-awesome.min.css' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Cabin' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet'>
+ </head>
+<body>
+    <div class='container'>
+      <nav data-bind='component: "navigation", css: {"top-bar-reverse": $root.account()}' class='top-bar' ></nav>
+      <div data-bind='component: "section"'></div>
+    </div>
+    <script data-main='app/main' src='app/require.js'></script>
+</body>
+</html>
