@@ -1,5 +1,6 @@
 # Coffee Time
-This project is part of the FrontEnd Nanodegree at Udacity. It's a single-page app that integrates Foursquare and GoogleMaps to implement a search feature so that the user can find coffee places on the area.
+This project is part of the FrontEnd Nanodegree at Udacity. It's a single-page app that integrates Foursquare and GoogleMaps to implement a search feature that allows Foursquare users to find coffee places within a specified area.
+[Read more](http://www.anaescontrela.com/works/coffe-places/)
 
 ## Install
 > You'll need a Foursquare account to try the app
@@ -57,4 +58,4 @@ There are 4 components (navigation, searchBox, searchResults, section) that shar
 
 
 ## Add/Change images
-* If you want to chance the image for the start screen. All you need to do is replace the file on image folder and run the command `gulp resize`
+* If you want to change the image for the start screen. All you need to do is replace the file on image folder and run the command `gulp resize`
