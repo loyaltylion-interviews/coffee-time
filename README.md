@@ -49,7 +49,7 @@ There are 4 components (navigation, searchBox, searchResults, section) that shar
 * Go to [main.less](app/styles/src/main.less)
     * Change the typography `@primaryFont` `@secondaryFont`
     * Change the color palete `@primary` `@secondary`
-    * Change the breakpoints `@xsmall``@medium``@large``@xlarge`
+    * Change the breakpoints `@xsmall` `@medium` `@large` `@xlarge`
     * Or specific styles, of course :)
 * When you are done go to the terminal and run `gulp styles` command to generate the updated .css file
 
