@@ -1,5 +1,12 @@
 # Coffee Time
 This project is part of the FrontEnd Nanodegree at Udacity. It's a single-page app that integrates Foursquare and GoogleMaps to implement a search feature that allows Foursquare users to find coffee places within a specified area.
+
+![](/screens/coffePlacesBig.png)
+![](/screens/coffePlacesMob_01.png) 
+![](/screens/coffePlacesMob_02.png)
+![](/screens/coffePlacesMob_03.png)
+
+
 [Read more](http://www.anaescontrela.com/works/coffe-places/)
 
 ## Install
