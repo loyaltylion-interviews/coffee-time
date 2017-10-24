@@ -17,7 +17,7 @@ define(
             if (month < 10) {
                 month = '0' + month;
             }
-            today = year + month + day;
+            today = year.toString() + month + day;
             return today;
         }
         return todayDate();
